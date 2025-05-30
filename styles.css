@@ -2,3 +2,37 @@ body {
 	padding: 10px;
 	padding-left: 20px;
 }
+
+.header {
+	width: 100%;
+}
+
+.main {
+	display: flex;
+}
+
+.sidebar {
+	height: 100%;
+	width: 100px;
+	position: sticky;
+	top: 50px;
+}
+
+.sidebar h4 {
+	margin: 0;
+}
+
+.sidebar a {
+	display: inline-block;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+.content {
+	padding: 20px;
+	padding-top: 0;
+}
+
+.content p {
+	margin-top: 0;
+}
