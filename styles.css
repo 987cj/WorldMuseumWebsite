@@ -8,6 +8,12 @@ body {
 	width: 100%;
 }
 
+.techtext {
+	font-family: "Share Tech", 'Courier New', Courier, monospace;
+	font-weight: bold;
+	font-style: italic;
+}
+
 .main {
 	display: flex;
 }
@@ -33,6 +39,10 @@ body {
 .content {
 	padding: 20px;
 	padding-top: 0;
+}
+
+.content div h2 {
+	margin-bottom: 0;
 }
 
 .content p {
