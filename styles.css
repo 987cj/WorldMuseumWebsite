@@ -31,6 +31,7 @@ body {
 }
 
 .sidebar a {
+	font-weight: normal;
 	display: inline-block;
 	margin-bottom: 5px;
 	width: 100%;
@@ -41,10 +42,18 @@ body {
 	padding-top: 0;
 }
 
+.content div {
+	padding-top: 3px;
+}
+
 .content div h2 {
 	margin-bottom: 0;
 }
 
 .content p {
 	margin-top: 0;
+}
+
+.endp {
+	margin-bottom: 0;
 }

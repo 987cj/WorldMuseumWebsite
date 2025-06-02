@@ -17,21 +17,21 @@
 		<div class="sidebar">
 			<h4>Contents</h4>
 			<hr />
-			<a href="#strategy">Strategy</a>
-			<a href="#timeline">Timeline</a>
-			<a href="#tech">Tech</a>
-			<a href="#objects">Objects</a>
-			<a href="#considerations">Special Considerations</a>
+			<a href="#strategy" id="sbar_strategy">Strategy</a>
+			<a href="#timeline" id="sbar_timeline">Timeline</a>
+			<a href="#tech" id="sbar_tech">Tech</a>
+			<a href="#objects" id="sbar_objects">Objects</a>
+			<a href="#considerations" id="sbar_considerations">Special Considerations</a>
 		</div>
 
 		<div class="content">
-			<p>The World Museum is an institution of scientific curiosity and cultural connection, with a proud history as one of the world's oldest museums. It is a stronghold for our scientific and historic past, continuing to educate its many guests and assisting researchers to solve the biggest problems of our world.
+			<p class="endp">The World Museum is an institution of scientific curiosity and cultural connection, with a proud history as one of the world's oldest museums. It is a stronghold for our scientific and historic past, continuing to educate its many guests and assisting researchers to solve the biggest problems of our world.
 			</p>
 
 			<div id="strategy">
 				<h2>Strategy</h2>
 				<hr/>
-				<p>
+				<p class="endp">
 					Digitisation is a process where we take information from physical objects and store them in a digital database. This will allow faster and easier access of information to scientists, organisations and communities that need them, as well as improve management of assets, both digital and physical. This is already being done with museums all over the world, and with the World Museum's rich history and collections, this is bound to make a huge positive impact to the communities they serve.
 				</p>
 			</div>
@@ -68,11 +68,83 @@
 					<p>
 						Our plan includes working side by side with Indigenous communities to add cultural meaning to the database. We will allow communities to help describe the objects in their own language and from their own point of view. Some objects may need to have limited access to protect cultural knowledge and our system will respect that by using tiered access levels. This gives communities more control and helps build trust.
 					</p>
-					<p>
+					<p class="endp">
 						We also recognise that many of these communities are in remote areas. Because of this, we propose using a mobile app that works offline. It can be used during field trips where there’s no internet. Staff can gather information, stories and context directly from community members and upload it later when they’re back online. This approach avoids the need to move fragile or sensitive items and supports safe, respectful data collection.
 					</p>
 			</div>
 		</div>
 		</div>
+		
+		<script>
+			let strategy = document.getElementById("strategy");
+			let timeline = document.getElementById("timeline");
+			let tech = document.getElementById("tech");
+			let objects = document.getElementById("objects");
+			let considerations = document.getElementById("considerations");
+
+			let sbar_strategy = document.getElementById("sbar_strategy");
+			let sbar_timeline = document.getElementById("sbar_timeline");
+			let sbar_tech = document.getElementById("sbar_tech");
+			let sbar_objects = document.getElementById("sbar_objects");
+			let sbar_considerations = document.getElementById("sbar_considerations");
+
+			function scrollBold() {
+				var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+				//var scrollTop = window.pageYOffset;
+
+				console.log(scrollTop);
+
+				if (scrollTop >= strategy.offsetTop && scrollTop < timeline.offsetTop)
+				{
+					sbar_strategy.style.fontWeight = "bold";
+					sbar_timeline.style.fontWeight = "normal";
+					sbar_tech.style.fontWeight = "normal";
+					sbar_objects.style.fontWeight = "normal";
+					sbar_considerations.style.fontWeight = "normal";
+				}
+				else if (scrollTop >= timeline.offsetTop && scrollTop < tech.offsetTop)
+				{
+					sbar_strategy.style.fontWeight = "normal";
+					sbar_timeline.style.fontWeight = "bold";
+					sbar_tech.style.fontWeight = "normal";
+					sbar_objects.style.fontWeight = "normal";
+					sbar_considerations.style.fontWeight = "normal";
+				}
+				else if (scrollTop >= tech.offsetTop && scrollTop < objects.offsetTop)
+				{
+					sbar_strategy.style.fontWeight = "normal";
+					sbar_timeline.style.fontWeight = "normal";
+					sbar_tech.style.fontWeight = "bold";
+					sbar_objects.style.fontWeight = "normal";
+					sbar_considerations.style.fontWeight = "normal";
+				}
+				else if (scrollTop >= objects.offsetTop && scrollTop < considerations.offsetTop)
+				{
+					sbar_strategy.style.fontWeight = "normal";
+					sbar_timeline.style.fontWeight = "normal";
+					sbar_tech.style.fontWeight = "normal";
+					sbar_objects.style.fontWeight = "bold";
+					sbar_considerations.style.fontWeight = "normal";
+				}
+				else if (scrollTop >= considerations.offsetTop)
+				{
+					sbar_strategy.style.fontWeight = "normal";
+					sbar_timeline.style.fontWeight = "normal";
+					sbar_tech.style.fontWeight = "normal";
+					sbar_objects.style.fontWeight = "normal";
+					sbar_considerations.style.fontWeight = "bold";
+				}
+				else
+				{
+					sbar_strategy.style.fontWeight = "normal";
+					sbar_timeline.style.fontWeight = "normal";
+					sbar_tech.style.fontWeight = "normal";
+					sbar_objects.style.fontWeight = "normal";
+					sbar_considerations.style.fontWeight = "normal";
+				}
+			}
+
+			setInterval(scrollBold, 100);
+		</script>
 	</body>
 </html>
