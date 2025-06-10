@@ -22,6 +22,7 @@
 			<a href="#tech" id="sbar_tech">Tech</a>
 			<a href="#objects" id="sbar_objects">Objects</a>
 			<a href="#considerations" id="sbar_considerations">Special Considerations</a>
+			<a href="#riskmgmt" id="sbar_riskmgmt">Risk Management</a>
 		</div>
 
 		<div class="content">
@@ -90,6 +91,8 @@
 					<li>Collaborate with cultural and educational institutions for broader impact.</li>
 				</ul>
 
+				<br />
+
 				<p>During the Digitisation Setup phase, costs are moderate. Investment is directed toward essential equipment such as DSLR cameras, scanning devices, software licenses, and comprehensive staff training. This early groundwork delivers high-quality outcomes, with DSLR and 3D scanning ensuring detailed and accurate representations of objects. Timewise, the setup phase spans Years 1 and 2 and requires thoughtful planning to onboard staff and establish technical protocols without overwhelming resources.</p>
 				<p>The 3D Scanning Phase introduces higher costs due to the need for specialised scanners, powerful computing infrastructure, and expanded digital storage. However, the returns in quality are significant—3D scanning enables precise modelling of objects, supporting future-proof archiving and even physical restoration. From a time perspective, this phase is the most demanding, as scanning millions of objects is inherently labor-intensive and must be spread across multiple years to be feasible.</p>
 				<p>For AR/VR Development, costs range from medium to high depending on the extent of custom development and external expertise required. The quality payoff is substantial, as immersive technologies create engaging educational and outreach experiences that can bring museum collections to life. Development begins in Year 3 and requires careful scheduling to ensure proper testing, iteration, and refinement over time.</p>
@@ -153,12 +156,14 @@
 			let tech = document.getElementById("tech");
 			let objects = document.getElementById("objects");
 			let considerations = document.getElementById("considerations");
+			let riskmgmt = document.getElementById("riskmgmt");
 
 			let sbar_strategy = document.getElementById("sbar_strategy");
 			let sbar_timeline = document.getElementById("sbar_timeline");
 			let sbar_tech = document.getElementById("sbar_tech");
 			let sbar_objects = document.getElementById("sbar_objects");
 			let sbar_considerations = document.getElementById("sbar_considerations");
+			let sbar_riskmgmt = document.getElementById("sbar_riskmgmt");
 
 			function scrollBold() {
 				var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
@@ -173,6 +178,7 @@
 					sbar_tech.style.fontWeight = "normal";
 					sbar_objects.style.fontWeight = "normal";
 					sbar_considerations.style.fontWeight = "normal";
+					sbar_riskmgmt.style.fontWeight = "normal";
 				}
 				else if (scrollTop >= timeline.offsetTop && scrollTop < tech.offsetTop)
 				{
@@ -181,6 +187,7 @@
 					sbar_tech.style.fontWeight = "normal";
 					sbar_objects.style.fontWeight = "normal";
 					sbar_considerations.style.fontWeight = "normal";
+					sbar_riskmgmt.style.fontWeight = "normal";
 				}
 				else if (scrollTop >= tech.offsetTop && scrollTop < objects.offsetTop)
 				{
@@ -189,6 +196,7 @@
 					sbar_tech.style.fontWeight = "bold";
 					sbar_objects.style.fontWeight = "normal";
 					sbar_considerations.style.fontWeight = "normal";
+					sbar_riskmgmt.style.fontWeight = "normal";
 				}
 				else if (scrollTop >= objects.offsetTop && scrollTop < considerations.offsetTop)
 				{
@@ -197,14 +205,25 @@
 					sbar_tech.style.fontWeight = "normal";
 					sbar_objects.style.fontWeight = "bold";
 					sbar_considerations.style.fontWeight = "normal";
+					sbar_riskmgmt.style.fontWeight = "normal";
 				}
-				else if (scrollTop >= considerations.offsetTop)
+				else if (scrollTop >= considerations.offsetTop && scrollTop < riskmgmt.offsetTop)
 				{
 					sbar_strategy.style.fontWeight = "normal";
 					sbar_timeline.style.fontWeight = "normal";
 					sbar_tech.style.fontWeight = "normal";
 					sbar_objects.style.fontWeight = "normal";
 					sbar_considerations.style.fontWeight = "bold";
+					sbar_riskmgmt.style.fontWeight = "normal";
+				}
+				else if (scrollTop >= riskmgmt.offsetTop)
+				{
+					sbar_strategy.style.fontWeight = "normal";
+					sbar_timeline.style.fontWeight = "normal";
+					sbar_tech.style.fontWeight = "normal";
+					sbar_objects.style.fontWeight = "normal";
+					sbar_considerations.style.fontWeight = "normal";
+					sbar_riskmgmt.style.fontWeight = "bold";
 				}
 				else
 				{
@@ -213,6 +232,7 @@
 					sbar_tech.style.fontWeight = "normal";
 					sbar_objects.style.fontWeight = "normal";
 					sbar_considerations.style.fontWeight = "normal";
+					sbar_riskmgmt.style.fontWeight = "normal";
 				}
 			}
 
