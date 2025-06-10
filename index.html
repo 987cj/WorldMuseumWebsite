@@ -23,6 +23,7 @@
 			<a href="#objects" id="sbar_objects">Objects</a>
 			<a href="#considerations" id="sbar_considerations">Special Considerations</a>
 			<a href="#riskmgmt" id="sbar_riskmgmt">Risk Management</a>
+			<a href="#resources" id="sbar_resources">Resources</a>
 		</div>
 
 		<div class="content">
@@ -241,6 +242,7 @@
 			let objects = document.getElementById("objects");
 			let considerations = document.getElementById("considerations");
 			let riskmgmt = document.getElementById("riskmgmt");
+			let resources = document.getElementById("resources");
 
 			let sbar_strategy = document.getElementById("sbar_strategy");
 			let sbar_timeline = document.getElementById("sbar_timeline");
@@ -248,6 +250,7 @@
 			let sbar_objects = document.getElementById("sbar_objects");
 			let sbar_considerations = document.getElementById("sbar_considerations");
 			let sbar_riskmgmt = document.getElementById("sbar_riskmgmt");
+			let sbar_resources = document.getElementById("sbar_resources");
 
 			function scrollBold() {
 				var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
@@ -301,6 +304,15 @@
 					sbar_riskmgmt.style.fontWeight = "normal";
 				}
 				else if (scrollTop >= riskmgmt.offsetTop)
+				{
+					sbar_strategy.style.fontWeight = "normal";
+					sbar_timeline.style.fontWeight = "normal";
+					sbar_tech.style.fontWeight = "normal";
+					sbar_objects.style.fontWeight = "normal";
+					sbar_considerations.style.fontWeight = "normal";
+					sbar_riskmgmt.style.fontWeight = "bold";
+				}
+				else if (scrollTop >= resources.offsetTop)
 				{
 					sbar_strategy.style.fontWeight = "normal";
 					sbar_timeline.style.fontWeight = "normal";
