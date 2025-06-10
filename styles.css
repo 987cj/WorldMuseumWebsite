@@ -69,3 +69,7 @@ li a {
 .endp {
 	margin-bottom: 0;
 }
+
+#intro {
+	font-style: italic;
+}
